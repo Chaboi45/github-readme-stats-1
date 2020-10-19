@@ -65,27 +65,12 @@ function calculateRank({
 
   let level = "";
 
-  if (normalizedScore < RANK_S_VALUE) {
-    level = "S+";
-  }
   if (
-    normalizedScore >= RANK_S_VALUE &&
-    normalizedScore < RANK_DOUBLE_A_VALUE
-  ) {
-    level = "S";
-  }
-  if (
-    normalizedScore >= RANK_DOUBLE_A_VALUE &&
-    normalizedScore < RANK_A2_VALUE
+    true
   ) {
     level = "A++";
   }
-  if (normalizedScore >= RANK_A2_VALUE && normalizedScore < RANK_A3_VALUE) {
-    level = "A+";
-  }
-  if (normalizedScore >= RANK_A3_VALUE && normalizedScore < RANK_B_VALUE) {
-    level = "B+";
-  }
+  
 
   return { level, score: normalizedScore };
 }
